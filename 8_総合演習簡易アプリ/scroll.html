@@ -1,0 +1,46 @@
+<!-- スクロール操作アプリ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            /* 「上に戻るボタン」を画面下に固定 */
+            .moveToTop{
+                position:fixed;
+                bottom:20px;
+                right:20px;
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dummy"></div>
+        <button type="button" class="moveToTop">上に戻る</button>
+        <script>
+            // ダミーテキストを生成する
+            const dummyContent = document.querySelector('.dummy');
+            for(let i = 0; i < 1000; i++){
+                dummyContent.textContent += `テキスト${i}`;
+            }
+
+            // スクロールしたときに「上に戻る」ボタンを表示
+            window.addEventListener('scroll', function(){
+                const button = document.querySelector('.moveToTop');
+                if(window.scrollY>=200){
+                    button.style.display = 'block';
+                }else{
+                    button.style.display = 'none';
+                }
+            });
+
+            // ページ上に戻る処理
+            const button = document.querySelector('.moveToTop');
+            button.addEventListener('click', function(){
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+    </body>
+</html>

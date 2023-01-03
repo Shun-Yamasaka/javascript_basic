@@ -1,0 +1,21 @@
+<!-- カウントアップアプリ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="counter">0</div>
+        <button class="countup" type="button">+1</button>
+        <script>
+            const countupButton = document.querySelector('.countup');
+            // ボタンクリックイベント
+            countupButton.addEventListener('click', function(){
+                // カウンター値を取得
+                const counter = document.querySelector('.counter');
+                // カウントアップ
+                counter.textContent = parseInt(counter.textContent)+1;
+            });
+        </script>
+    </body>
+</html>
