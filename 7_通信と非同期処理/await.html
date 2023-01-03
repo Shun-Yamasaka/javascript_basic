@@ -1,0 +1,19 @@
+<!-- JSONファイルから文字列を受け取る（async/awaitで書き換える） -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="result"></div>
+        <script>
+            async function showJsonText(){
+                const response = await fetch('http://127.0.0.1:550/sample.json');
+                const json = await response.json();
+                const resultBox = document.querySelector('.result');
+                resultBox.textContent = json.text;
+            }
+            showJsonText();
+        </script>
+    </body>
+</html>
