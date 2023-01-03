@@ -1,0 +1,5 @@
+// カスタム属性を書き換える
+const profile = document.querySelector('.profile');
+profile.dataset.id=999;
+profile.dataset.userName='new zaru';
+console.log(profile);
