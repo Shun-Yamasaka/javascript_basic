@@ -1,0 +1,25 @@
+<!-- キーを押すとイベントが発生 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div style="width:200px; height:100px; background:pink;"></div>
+        <script>
+            const div = document.querySelector('div');
+            // マウスを動かしたとき
+            div.addEventListener('mousemove', function (event){
+                console.log(`Move：x=${event.offsetX}, y=${event.offsetY}`);
+            });
+            // マウスボタンを押下したとき
+            div.addEventListener('mousedown', function (event){
+                console.log(`Down：x=${event.offsetX}, y=${event.offsetY}`);
+            });
+            // マウスボタンを押下して離したとき
+            div.addEventListener('mouseup', function (event){
+                console.log(`Up：x=${event.offsetX}, y=${event.offsetY}`);
+            });
+        </script>
+    </body>
+</html>

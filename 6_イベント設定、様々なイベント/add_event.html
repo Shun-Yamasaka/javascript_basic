@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button type="button">ボタン</button>
+        <script>
+            // 関数の定義
+            function alertMessage(){
+                alert('ボタンをクリックしました');
+            }
+
+            // 要素の取得
+            const button = document.querySelector('button');
+            // イベント設定(クリック時、alertMessage関数起動)
+            button.addEventListener('click', alertMessage);
+        </script>
+    </body>
+</html>

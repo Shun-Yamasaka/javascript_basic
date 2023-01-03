@@ -1,0 +1,16 @@
+<!-- ボタンをクリックするとイベントが発生 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button type="button">ボタン</button>
+        <script>
+            const button = document.querySelector('button');
+            button.addEventListener('click', function(){
+                console.log('クリックしました');
+            });
+        </script>
+    </body>
+</html>

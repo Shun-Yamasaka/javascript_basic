@@ -1,0 +1,20 @@
+<!-- currentTargetとtargetの違い -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button type="button">
+            <span>span要素</span>
+            ボタン要素
+        </button>
+        <script>
+            const button = document.querySelector('button');
+            button.addEventListener('click', function(event){
+                console.log(event.currentTarget);
+                console.log(event.target);
+            });
+        </script>
+    </body>
+</html>
